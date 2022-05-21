@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal" >
+
+        <TextView
+			android:id="@+id/tv_app"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="App" />
+
+        <TextView
+            android:id="@+id/tv_color_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <TextView
+			android:id="@+id/tv_system"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="System" />
+
+        <TextView
+            android:id="@+id/tv_color_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <TextView
+			android:id="@+id/tv_code"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Color" />
+
+        <TextView
+            android:id="@+id/tv_color_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

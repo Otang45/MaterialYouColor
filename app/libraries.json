@@ -1,0 +1,26 @@
+[
+	{
+		"artifactId": "appcompat",
+		"groupId": "androidx.appcompat",
+		"scope": "compile",
+		"versionName": "1.4.1"
+	},
+	{
+		"artifactId": "viewbinding",
+		"groupId": "androidx.databinding",
+		"scope": "compile",
+		"versionName": "7.2.0"
+	},
+	{
+		"artifactId": "palette",
+		"groupId": "androidx.palette",
+		"scope": "compile",
+		"versionName": "1.0.0"
+	},
+	{
+		"artifactId": "material",
+		"groupId": "com.google.android.material",
+		"scope": "compile",
+		"versionName": "1.6.0"
+	}
+]
