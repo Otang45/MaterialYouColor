@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(binding.getRoot());
 		WindowPreference preference = new WindowPreference(this);
 		preference.applyEdgeToEdgePreference(getWindow(), getColor(R.color.colorSurface));
+		getWindow().getDecorView().setBackgroundColor(getColor(R.color.colorSurface));
 		AppUtils.addSystemWindowInsetToPadding(binding.getRoot(), false, true, false, false);
 		if (AppUtils.isDarkTheme(this)) {
 			setupListDark();
