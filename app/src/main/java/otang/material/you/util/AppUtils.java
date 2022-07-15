@@ -2,6 +2,7 @@ package otang.material.you.util;
 
 import android.content.res.Configuration;
 import android.os.Build;
+import android.os.Environment;
 import android.util.TypedValue;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
@@ -11,12 +12,27 @@ import android.view.View;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.ViewCompat;
 import android.widget.Toast;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonElement;
+import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
+import java.io.File;
 import java.net.InetAddress;
 import android.net.ConnectivityManager;
 import android.content.Context;
 import java.util.Calendar;
 
 public class AppUtils {
+
+	public static String formatJson(String json) {
+		Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
+		JsonElement je = new JsonParser().parse(json);
+		return gson.toJson(je);
+	}
+
+	public static File getJsonOutputDir() {
+		return new File(Environment.getExternalStorageDirectory(), "MaterialYouColor");
+	}
 
 	public static boolean isNetworkConnected(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

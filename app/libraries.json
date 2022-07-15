@@ -1,26 +1,52 @@
 [
 	{
 		"artifactId": "appcompat",
+		"excludes": [],
 		"groupId": "androidx.appcompat",
 		"scope": "compile",
 		"versionName": "1.4.1"
 	},
 	{
 		"artifactId": "viewbinding",
+		"excludes": [],
 		"groupId": "androidx.databinding",
 		"scope": "compile",
 		"versionName": "7.2.0"
 	},
 	{
 		"artifactId": "palette",
+		"excludes": [],
 		"groupId": "androidx.palette",
 		"scope": "compile",
 		"versionName": "1.0.0"
 	},
 	{
+		"artifactId": "utilcodex",
+		"excludes": [
+			{
+				"artifactId": "gson",
+				"excludes": [],
+				"groupId": "com.google.code.gson",
+				"scope": "compile",
+				"versionName": "2.8.5"
+			}
+		],
+		"groupId": "com.blankj",
+		"scope": "compile",
+		"versionName": "1.31.0"
+	},
+	{
 		"artifactId": "material",
+		"excludes": [],
 		"groupId": "com.google.android.material",
 		"scope": "compile",
 		"versionName": "1.6.0"
+	},
+	{
+		"artifactId": "gson",
+		"excludes": [],
+		"groupId": "com.google.code.gson",
+		"scope": "compile",
+		"versionName": "2.9.0"
 	}
 ]

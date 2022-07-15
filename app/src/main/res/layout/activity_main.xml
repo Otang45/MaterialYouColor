@@ -6,6 +6,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+		android:paddingEnd="16dp"
+		android:paddingStart="16dp"
+		app:menu="@menu/menu"
+        app:title="@string/app_name" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl"
         android:layout_width="match_parent"
