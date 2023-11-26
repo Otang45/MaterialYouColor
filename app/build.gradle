@@ -3,14 +3,17 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    namespace 'otang.material.you'
+    compileSdk 34
 
     defaultConfig {
         applicationId "otang.material.you"
         minSdk 31
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -23,9 +26,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
-	// NOTE: CodeAssist does NOT support adding dependencies here, 
-	// use the library manager instead
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

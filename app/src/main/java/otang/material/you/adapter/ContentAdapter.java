@@ -1,18 +1,20 @@
 package otang.material.you.adapter;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
 import java.util.ArrayList;
-import java.lang.reflect.Array;
-import otang.material.you.model.ContentItem;
 import java.util.List;
+
+import otang.material.you.model.ContentItem;
 import otang.material.you.ui.fragment.ContentFragment;
 
 public class ContentAdapter extends FragmentStateAdapter {
 
-	private ArrayList<List<ContentItem>> list;
+	private final ArrayList<List<ContentItem>> list;
 
 	public ContentAdapter(FragmentManager fragmentManager, Lifecycle lifecycle, ArrayList<List<ContentItem>> list) {
 		super(fragmentManager, lifecycle);
@@ -24,6 +26,7 @@ public class ContentAdapter extends FragmentStateAdapter {
 		return 5;
 	}
 
+	@NonNull
 	@Override
 	public Fragment createFragment(int position) {
 		switch (position) {
@@ -43,7 +46,7 @@ public class ContentAdapter extends FragmentStateAdapter {
 			return new ContentFragment(list.get(4));
 		}
 		}
-		return null;
+		return new ContentFragment(list.get(0));
 	}
 
 }

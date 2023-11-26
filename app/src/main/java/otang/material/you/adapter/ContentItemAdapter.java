@@ -1,13 +1,16 @@
 package otang.material.you.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
-import otang.material.you.R;
-import otang.material.you.adapter.ContentItemAdapter.Holder;
+
 import otang.material.you.databinding.ContentItemBinding;
 import otang.material.you.model.ContentItem;
 import otang.material.you.util.AppUtils;
@@ -15,8 +18,8 @@ import otang.material.you.util.ColourUtils;
 
 public class ContentItemAdapter extends RecyclerView.Adapter<ContentItemAdapter.Holder> {
 
-	private Context context;
-	private List<ContentItem> itemList;
+	private final Context context;
+	private final List<ContentItem> itemList;
 
 	public ContentItemAdapter(Context context, List<ContentItem> itemList) {
 		this.context = context;
@@ -24,7 +27,7 @@ public class ContentItemAdapter extends RecyclerView.Adapter<ContentItemAdapter.
 	}
 
 	public static class Holder extends RecyclerView.ViewHolder {
-		private ContentItemBinding binding;
+		private final ContentItemBinding binding;
 
 		public Holder(ContentItemBinding binding) {
 			super(binding.getRoot());
@@ -32,11 +35,13 @@ public class ContentItemAdapter extends RecyclerView.Adapter<ContentItemAdapter.
 		}
 	}
 
+	@NonNull
 	@Override
-	public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+	public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		return new Holder(ContentItemBinding.inflate(LayoutInflater.from(context), parent, false));
 	}
 
+	@SuppressLint("SetTextI18n")
 	@Override
 	public void onBindViewHolder(Holder holder, int position) {
 		@ColorInt
