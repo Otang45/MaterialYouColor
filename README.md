@@ -1,6 +1,5 @@
 # Material You Color
-
-Aplikasi dibuat dengan [Code Assist](https://github.com/tyron12233/CodeAssist)
+Aplikasi menampilkan palet warna (nama System dan Material components) dari Material You
 
 # Screenshots
 ![Alt text](/screenshot/1.png?raw=true "Home")
